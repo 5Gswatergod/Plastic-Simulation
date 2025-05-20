@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photocatalysis Simulation: UV-Induced Plastic Degradation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔬 Photocatalysis Simulation: UV-Induced Plastic Degradation</h1>
+    <div class="controls">
+      <div>
+        <label for="plasticType">Plastic Type</label>
+        <select id="plasticType">
+          <option value="PET">PET (Polyethylene Terephthalate)</option>
+          <option value="PP">PP (Polypropylene)</option>
+          <option value="PE">PE (Polyethylene)</option>
+        </select>
+      </div>
+      <div>
+        <label for="uvIntensity">UV Intensity</label>
+        <input type="range" id="uvIntensity" min="0" max="100" value="70">
+        <div>Intensity: <span class="slider-value" id="uvValue">70%</span></div>
+      </div>
+    </div>
+    <button class="reset-btn" id="resetBtn">🔁 Reset Simulation</button>
+    <canvas id="graph"></canvas>
+    <div class="legend">
+      <span id="legendColor" style="background:#4ea8de;"></span> Plastic Mass (g)
+    </div>
+    <h2>🧪 Overview</h2>
+    <p>This simulation models how different plastics degrade under UV light with a TiO₂ photocatalyst. Adjust the plastic type and UV intensity to see how degradation rates change over time.</p>
+    <ul>
+      <li><b>Photocatalysis:</b> TiO₂ + UV → Reactive species that break down plastics</li>
+      <li><b>Kinetics:</b> Different plastics degrade at different rates</li>
+      <li><b>Environmental Impact:</b> Explore solutions for microplastic pollution</li>
+    </ul>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
